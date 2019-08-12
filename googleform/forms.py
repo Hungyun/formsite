@@ -12,6 +12,6 @@ class NameForm(ModelForm):
         widgets = {
             '姓名': forms.TextInput(attrs={'class': 'titleclass'}),
             '手機號碼': forms.TextInput(attrs={'class': 'textclass'}),
-            '我要幾台iphone': forms.SelectMultiple(),
+            '我要幾台iphone': forms.Select(),
             '驗證碼':forms.TextInput(attrs={'class': 'titleclass'})
             }
