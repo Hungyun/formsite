@@ -161,6 +161,13 @@ function openMenu(evt, menuName) {
 }
 document.getElementById("myLink").click();
 </script>
+{% if messages %}
+      <script>
+          {% for msg in messages %}
+              alert('{{ msg.message }}');
+          {% endfor %}
+      </script>
+{% endif %}
 
 </body>
 </html>
