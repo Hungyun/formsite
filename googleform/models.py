@@ -9,8 +9,7 @@ class Name(models.Model):
     手機號碼 = models.CharField(max_length=10)
     numberchoices = [('1','1(5張發票)'),('2','2(10張發票)'),('3','3(30張發票)'),('4','4(40張發票)'),('5','5(50張發票)')]
     我要幾台iphone = models.CharField(max_length=10,choices=numberchoices)
-
-    我想兌換的東西 = models.TextField()
+    驗證碼 = models.CharField("驗證碼(密碼)",max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
     def __str__(self):
-        return (self.姓名, self.created_date)
+        return (self.姓名, self.手機號碼 , self.created_date)
