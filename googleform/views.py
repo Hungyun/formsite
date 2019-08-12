@@ -11,7 +11,18 @@ from googleform.forms import NameForm
 
 # Create your views here.
 def index(request):
-    return render(request,'index.html')
+    form = NameForm()
+
+    if request.method=='POST':
+        form = NameForm(request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+            return thankyoupage(request)
+        else:
+            print('ERROR FORM INVALID')
+
+    return render(request,'index.html',{'form':form})
 
 def thankyoupage(request):
     return render(request,'thanks.html')
