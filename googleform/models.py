@@ -12,4 +12,4 @@ class Name(models.Model):
     驗證碼 = models.CharField("驗證碼(密碼)",max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
     def __str__(self):
-        return (self.姓名, self.手機號碼 , self.created_date)
+        return self.姓名
