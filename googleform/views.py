@@ -2,7 +2,8 @@
 需使用的一些function與html檔案的連結
 處理
 '''
-from django.shortcuts import render
+from django.contrib import messages
+from django.shortcuts import render, redirect
 # from django.http import HttpResponse
 # from googleform.models import Name
 from googleform.forms import NameForm
@@ -18,7 +19,8 @@ def index(request):
 
         if form.is_valid():
             form.save(commit=True)
-            return thankyoupage(request)
+            messages.success(request,"提交表單成功")
+            return redirect(index)
         else:
             print('ERROR FORM INVALID')
 
