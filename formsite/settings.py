@@ -23,9 +23,9 @@ STATIC_DIR = os.path.join(BASE_DIR,'static')
 SECRET_KEY = '_igpr$)_1ppqpit!4af4i1$scgulw+ao+24^8t#s_se+^#1q03'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hyc.pythonanywhere.com']
 
 
 # Application definition
