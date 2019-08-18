@@ -19,6 +19,7 @@ from googleform import views
 urlpatterns = [
     path('admin/', admin.site.urls,name='admin'),
     path('', include('googleform.urls')),
+    path('jp/',include('learnjapanese.urls')),
 #使用include可使連結導向轉移至app資料夾內的url.py尋找連結
 
     # path('inputyourname/',views.get_name,name='formpage'),

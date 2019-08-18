@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- {% for verb in verb_list %} -->
+      <div class="">
+        <div class="">
+          <h1 id='h1'>{{ verb.name }}</h1>
+        </div>
+        {% if verb.type == 1 %}
+        <h2 id='type'>{{ verb.type }}</h2>
+        {% endif %}
+      </div>
+    <!-- {% endfor %} -->
+    <p id='demo'>this is demo in paragraph</p>
+    <p id='demo2'></p>
+    <button onclick="change()">命令形?</button>
+      <script type="text/javascript">
+        var uline = ["う","く","す","つ","ぬ","ふ","む","ゆ","る"];
+        var eline = ["え","け","せ","て","ね","へ","め","","れ"];
+        var lastchar = document.getElementById('h1').textContent.slice(-1);
+        var restchar = document.getElementById('h1').textContent.slice(0,-1);
+        var position = uline.indexOf(lastchar);
+        var newlastchar = eline[position];
+        function change(){
+        document.getElementById('demo2').innerHTML= restchar.concat(newlastchar)
+        }
+      </script>
+      <!-- <script type="text/javascript"> -->
+        <!-- // document.getElementById('demo2').innerHTML=document.getElementById('h1').textContext; -->
+    <!-- //     var lastchar = document.getElementById('h1').textContext; -->
+    <!-- //     document.getElementById('demo2').innerHTML=lastchar; -->
+    <!-- //   </script> -->
+    <!-- //   var lastchar = document.getElementById('h1').textContext.slice(-1,0);
+    //   document.getElementById('demo2').innerHTML=lastchar;
+    //   var uline = ["う","く","す","つ","ぬ","ふ","む","ゆ","る"];
+    //   var eline = ["え","け","せ","て","ね","へ","め","","れ"];
+    //   function ordertype(){
+    //     var lastchar = document.getElementById('h1').textContext.slice(-1,0);
+    //     var restchar = document.getElementById('h1').textContext.slice(0,-1);
+    //     var position = uline.prototype.indexOf(lastchar);
+    //     var newlastchar = eline[position];
+    //       <!-- document.getElementById('demo2').innerHTML=restchar.concat(newlastchar) -->
+    <!-- //       document.getElementById('demo2').innerHTML=lastchar
+    //
+    //   } -->
+  </body>
+</html>
